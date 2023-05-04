@@ -1,0 +1,2 @@
+# NTPInventory
+For OJT PURPOSE
