@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Designplus: @yield('TopTTL')</title>
+	<title>SDOQC NTP-IS</title>
 	@yield('css')
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css">
 
@@ -21,7 +21,9 @@
 	<!--header--->			
 	<header>
 		
-		<a href="{{Route('NTPDashBoard.index')}}" class="logo"> <img src="{{asset('Asset/DP.png')}}" alt=""> DesignPlus</a>
+		<a href="{{Route('NTPDashBoard.index')}}" class="logo">
+			<img src="{{asset('Asset/sdo_logo.png')}}" alt="Logo">NTP-IS
+		</a>
 		<div class="bx bx-menu" id="menu-icon">   </div>
 		
 		<ul class="navbar">
