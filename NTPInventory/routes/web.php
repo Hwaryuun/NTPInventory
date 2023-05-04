@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NTPLogInCTLR;
 use App\Http\Controllers\NTPLogOutCTLR;
+use App\Http\Controllers\ApplicantCTRL;
 use App\Http\Controllers\DashBoardCTLR;
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::middleware(['auth:web'])->group(function(){
 
          Route::resource('NTPDashBoard',DashBoardCTLR::class);
+         Route::resource('NTPApplicant',ApplicantCTRL::class);
       
         
          Route::get('/NTPLogout', [NTPLogOutCTLR::class, 'store'])->name('NTPLogout');

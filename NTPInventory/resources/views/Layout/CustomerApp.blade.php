@@ -4,10 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Designplus: @yield('TopTTL')</title>
+	@yield('css')
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css">
 
-	<link rel="icon" href="{{asset('Asset/PS.png')}}" type="image/x-icon">
-
+	<link rel="icon" href="{{asset('Asset/sdo_logo.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('css/TableM.css')}}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap.css">
     <link rel="stylesheet" href="{{ asset('css/FrontMain.css')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
  	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -21,16 +23,15 @@
 		
 		<a href="{{Route('NTPDashBoard.index')}}" class="logo"> <img src="{{asset('Asset/DP.png')}}" alt=""> DesignPlus</a>
 		<div class="bx bx-menu" id="menu-icon">   </div>
-		{{-- <i class="fa-solid fa-bars"></i> --}}
+		
 		<ul class="navbar">
 			<li><a class ="a" href="{{Route('NTPDashBoard.index')}}"> <i class="fa-solid fa-house"></i> Home</a></li>
 			
-			<li><a class ="a" href=""><i class="fa-solid fa-cart-shopping"></i></i>Shop</a></li>
-			<li><a class ="a" href=""><i class="fa-solid fa-basket-shopping"></i>Cart</a></li>
-            <li><a class ="a" href="#Account"><i class="fa-solid fa-user"></i>  </a>
+			<li><a class ="a" href="{{Route('NTPApplicant.index')}}"><i class="fa-solid fa-users"></i>Applicants</a></li>
+			<li><a class ="a" href=""><i class="fa-solid fa-file-circle-exclamation"></i>Status</a></li>
+            <li><a class ="a" href="#Account"><i class="fa-solid fa-user"></i> {{auth()->user()->name}}  </a>
 				<ul class="ticks">
-					<li><a href="" class ="c"><i class="fa-solid fa-receipt"></i> History</a></li>
-					<li><a href="" class ="c"><i class="fa-solid fa-user"></i> Account</a></li>
+					<li><a href="" class ="c"><i class="fa-solid fa-chart-simple"></i> Reports</a></li>	
 					<li><a href="{{Route('NTPLogout')}}" class ="c"><i class="fa-solid fa-right-from-bracket"></i> Log out</a></li>
 				</ul>
 			</li>
@@ -89,13 +90,18 @@
 	</div>
 	
 	<!--link to js--->
-	<script src="{{asset('js/UploadThings.JS')}}"></script>
+
     <script src="{{asset('js/Sticky.JS')}}"></script>
     <script src="{{asset('js/SweetAlert.JS')}}"></script>
     <script src="{{asset('js/Sweet.JS')}}"></script>
-
+	<script src="{{asset('js/TBLS.JS')}}"></script>
+    <script src="{{asset('js/TBLM.JS')}}"></script>
+    <script src="{{asset('js/Connection.JS')}}"></script>
+	<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>   
 
   <!-- Initialize Swiper -->
+  
+ 
 	<script>
 
 		const Toast = Swal.mixin({           

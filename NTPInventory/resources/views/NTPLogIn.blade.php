@@ -72,7 +72,6 @@
 	<script src="{{asset('js/SweetAlert.JS')}}"></script>
     <script src="{{asset('js/Sweet.JS')}}"></script>
 	<script>
-
 			const Toast = Swal.mixin({           
 					toast: true,
 					position: 'top-end',
@@ -119,4 +118,3 @@
 
 </body>
 </html>
-
