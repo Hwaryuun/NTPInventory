@@ -1,0 +1,1 @@
+<a href="{{Route('NTPLogout')}}" class ="c"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
