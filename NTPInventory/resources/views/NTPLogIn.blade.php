@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DesignPlus Login</title>
+	<title>SDOQC-NTPIS</title>
     <link rel="stylesheet" href="{{ asset('css/UserLogin.css')}}">
-	<link rel="icon" href="{{asset('Asset/avatar.svg')}}" type="image/x-icon">
+	<link rel="icon" href="{{asset('Asset/sdo_logo.png')}}" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,7 +12,7 @@
 	
 	<div class="container">
 		<div class="img">
-			<img src="{{asset('Asset/bgs.svg')}}">
+			<img src="{{asset('Asset/login_svg_pic.svg')}}">
 		</div>
 
 		<div class="login-content">
@@ -20,8 +20,8 @@
 			<form action="{{Route('NTPLogin.store')}}" method="POST">
 				@csrf
 
-			  	<img src="{{asset('Asset/avatar.svg')}}">
-				<h2 class="title">NTP INVENTORY</h2>
+			  	<img src="{{asset('Asset/user_ic.png')}}">
+				<h2 class="title">SDOQC NTP-IS</h2>
 
            		<div class="input-div one" style="@error('email') border-bottom: 2px solid  rgb(255, 105, 105); @enderror">       		  
 					<div class="i">

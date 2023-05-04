@@ -566,7 +566,7 @@ section{
 	grid-template-columns: 1fr 1fr;
 	display: grid;
 	grid-gap: 10px;
-	background-image: url('/images/Asset_img/shatter.png');
+	background-image: url('/public/Asset/shatter.png');
 	background-size: cover;
 	background-position: center;
 	/* background: rgba(166, 166, 166, 1.0);
@@ -819,7 +819,7 @@ section{
 	position: relative;
 	width: 100%;
 	height: 100ex;
-	background: url('/images/Asset_img/SA.jpg') ;
+	background: url('/Asset/SA.jpg') ;
 	background-size: cover;
 	background-position: center;
 	display: grid;

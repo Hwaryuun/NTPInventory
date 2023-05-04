@@ -13,6 +13,7 @@ body{
 }
 
 .wave{
+	opacity: 0.4;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -59,7 +60,7 @@ form{
 
 .login-content h2{
 	margin: 20px 0;
-	color: rgb(203, 108, 0);
+	color: #01A4EC;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
@@ -119,7 +120,7 @@ form{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color:#ff9034;
+	background-color:#01A4EC;
 	transition: .4s;
 }
 
@@ -141,7 +142,7 @@ form{
 }
 
 .input-div.focus > .i > i{
-	color: #ff9034;
+	color: #01A4EC;
 }
 
 .input-div > div > input{
@@ -224,7 +225,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #7a4300, #ffae19, #6c6c6c);
+	background-image: linear-gradient(to right, #120274, #1082ed, #626264);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
