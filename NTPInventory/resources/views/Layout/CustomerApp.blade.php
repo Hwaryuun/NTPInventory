@@ -85,7 +85,7 @@
 		<hr>
 		
 		<div class="end-text">
-			<p>Copyright ©{{now()->format('Y')}} All rights reserved | By Allen Dex Cutie Pie Farol</p>
+			<p>©{{now()->format('Y')}} All rights reserved | By Allen Dex Cutie Pie Farol</p>
 		</div>
 	</div>
 	
