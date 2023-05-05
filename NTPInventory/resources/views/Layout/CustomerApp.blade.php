@@ -22,7 +22,7 @@
 	<header>
 		
 		<a href="{{Route('NTPDashBoard.index')}}" class="logo">
-			<img src="{{asset('Asset/sdo_logo.png')}}" alt="Logo">NTP-IS
+			<img src="{{asset('Asset/sdo_logo.png')}}" alt="Logo">SDOQC NTP-IS
 		</a>
 		<div class="bx bx-menu" id="menu-icon">   </div>
 		
@@ -49,8 +49,8 @@
 		<div class="footer">
 			<div class="main">
 				
-				 <div class="list">
-					<h5 class="logo"> DSP+ </h5>
+				<div class="list">
+					<h5 class="logo">SDOQC NTP</h5>
 				</div>
 
 				<div class="list">
@@ -58,26 +58,24 @@
 					<ul>
 						<li><a href="">About us</a></li>
 						<li><a href="">Terms & Conditions</a></li>
-						<li><a href="">FAQS</a></li>										
-						<li><a href="">Equipment</a></li>
+						<li><a href="">FAQS</a></li>
 					</ul>
 				</div>
 
 				<div class="list">
 					<h4>Contact Info</h4>
 					<ul>
-						<li><a href="#">8 Mangachapoy cor </a></li>
-						<li><a href="#">Narig Streets</a></li>
-						<li><a href="#"> Veterans Village </a></li>
-						<li><a href="#">Project 7</a></li>
-						<li><a href="#">digitalprinting@designplusph.com</a></li>
+						<li><a href="#">Nueva Ecija St.</a></li>
+						<li><a href="#">Bago Bantay</a></li>
+						<li><a href="#">Quezon City</a></li>
+						<li><a href="#">human.resource@depedqc.ph</a></li>
 					</ul>
 				</div>
 
 				<div class="list">
 					<h4>Connect</h4>
 					<div class="social">
-						<a href="https://web.facebook.com/designplusonline" target=”_blank”><i class='bx bxl-facebook' ></i></a>
+						<a href="https://www.facebook.com/SDOQC-HR-Non-Teaching-101158962545643" target=”_blank”><i class='bx bxl-facebook' ></i></a>
 					</div>
 				</div>
 				
@@ -87,7 +85,7 @@
 		<hr>
 		
 		<div class="end-text">
-			<p>Copyright ©2022 All rights reserved | By Design Plus and IT Student</p>
+			<p>Copyright ©{{now()->format('Y')}} All rights reserved | By Allen Dex Cutie Pie Farol</p>
 		</div>
 	</div>
 	

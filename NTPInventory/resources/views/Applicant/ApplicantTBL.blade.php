@@ -9,7 +9,7 @@
 
      
         <div class="specs">
-            <a href=""> ADMIN </a> >>  <a href=""> APPLICANT </a> 
+            <a href=""> ADMIN </a> >> <a href=""> APPLICANT </a> 
         </div>
 
         <div class="specsxa">
