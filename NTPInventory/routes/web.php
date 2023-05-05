@@ -5,6 +5,7 @@ use App\Http\Controllers\NTPLogInCTLR;
 use App\Http\Controllers\NTPLogOutCTLR;
 use App\Http\Controllers\ApplicantCTRL;
 use App\Http\Controllers\DashBoardCTLR;
+use App\Http\Controllers\StatusCTRL;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,7 @@ Route::group(['prefix' => 'admin'],function(){
 
          Route::resource('NTPDashBoard',DashBoardCTLR::class);
          Route::resource('NTPApplicant',ApplicantCTRL::class);
+         Route::resource('NTPStatus',StatusCTRL::class);
       
         
          Route::get('/NTPLogout', [NTPLogOutCTLR::class, 'store'])->name('NTPLogout');

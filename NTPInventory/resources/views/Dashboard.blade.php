@@ -12,15 +12,15 @@
             </div>
             
             <div class="row">
-                <div class="column" id="shart">    
-                    <h5 class='namechart'>POSITION</h5>
-                    <canvas id="myChart" ></canvas>          
-                </div>
-                
-                <div class="column" id="shart">
-                    <h5 class='namechart' >GENDER</h5>
-                    <canvas id="myCharts" ></canvas>                      
-                </div>    
+                    <div class="column" id="shart">    
+                        <h5 class='namechart'>POSITION </h5>
+                        <canvas id="myChart" ></canvas>          
+                    </div>
+                    
+                    <div class="column" id="shart">
+                        <h5 class='namechart' >GENDER </h5>
+                        <canvas id="myCharts" ></canvas>                      
+                    </div>    
             </div>
 
          

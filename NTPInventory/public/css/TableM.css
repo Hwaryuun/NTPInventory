@@ -1,4 +1,5 @@
 
+
 table.dataTable thead > tr > th.sorting,
 table.dataTable thead > tr > th.sorting_asc,
 table.dataTable thead > tr > th.sorting_desc,
@@ -197,7 +198,7 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
   .dataTables_wrapper .dataTables_info,
   .dataTables_wrapper .dataTables_paginate {
     float: none;
-    text-align: center;
+    text-align: left;
   }
   .dataTables_wrapper .dataTables_paginate {
     margin-top: 0.5em;
@@ -207,30 +208,33 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
   .dataTables_wrapper .dataTables_length,
   .dataTables_wrapper .dataTables_filter {
     float: none;
-    text-align: center;
+    text-align: left;
   }
   .dataTables_wrapper .dataTables_filter {
     margin-top: 0.5em;
   }
 }
 
-.display {
+.displayd {
   border-collapse: collapse;
   /* font-size: 13.5px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
-  background: #006f98;
   border-radius: 4px;
  
 }
-.display thead tr {
+.displayd thead tr {
   color: #ffffff;
+
 }
 
 th{
+  background: #006f98;
+ 
   padding: 17px 25px;
   text-align: center;
 }
+
 td {
   padding: 17px 25px;
   text-align: center;
@@ -271,8 +275,9 @@ tbody tr:nth-of-type(odd) {
   align-items: center;
   justify-content: center;
   font-size: 13.5px;
-  padding: 20px 0;
+  padding: 20px 10px;
   gap: 5px;
+
 
 }
 .BTNS-EDTYS{
