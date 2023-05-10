@@ -24,17 +24,11 @@
 		<a href="{{Route('NTPDashBoard.index')}}" class="logo">
 			<img src="{{asset('Asset/sdo_logo.png')}}" alt="Logo">SDOQC NTP-IS
 		</a>
-		<div class="bx bx-menu" id="menu-icon">   </div>
-		
-		<ul class="navbar">
-			<li><a class ="a" href="{{Route('NTPDashBoard.index')}}"> <i class="fa-solid fa-house"></i> Home</a></li>
-			
-			<li><a class ="a" href="{{Route('NTPApplicant.index')}}"><i class="fa-solid fa-users"></i>Applicants</a>
-				<ul class="ticks">
-					<li><a href="" class ="c"><i class="fa-solid fa-chart-simple"></i>Status</a></li>
-				</ul>
-			</li>
+		<div class="bx bx-menu" id="menu-icon"></div>
 
+		<ul class="navbar">
+			<li><a class ="a" href="{{Route('NTPDashBoard.index')}}"> <i class="fa-solid fa-house"></i>Home</a></li>
+			<li><a class ="a" href="{{Route('NTPApplicant.index')}}"><i class="fa-solid fa-users"></i>Applicants</a></li>
 			<li><a class ="a" href=""><i class="fa-solid fa-school"></i>School</a>
 				<ul class="ticks1">
 					<li><a href="" class ="c"><i class="fa-solid fa-city"></i>Districts</a></li>
