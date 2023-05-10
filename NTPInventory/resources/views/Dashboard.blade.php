@@ -217,56 +217,54 @@
       type: 'bar',
       data: {
         labels: [
-           
-           'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',
-     
-   ],
-   datasets: [{
-     label: 'Full',
-     data:  [
-              14,21,23,32
-          ],
-          backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(201, 203, 207, 0.2)'
+           'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',  
+        ],
+        datasets: [{
+          label: 'Full',
+          data:  [
+                    14,21,23,32
                 ],
-                borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
-            ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        indexAxis: 'y',
-        // Elements options apply to all of the options unless overridden in a dataset
-        // In this case, we are setting the border of each horizontal bar to be 2px wide
-        elements: {
-          bar: {
-            borderWidth: 2,
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'right',
-          },
-          title: {
-            display: true,
-            text: 'Applicant Status Chart'
-          }
-        }
-      },
-    });
+                backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 205, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(201, 203, 207, 0.2)'
+                      ],
+                      borderColor: [
+                      'rgb(255, 99, 132)',
+                      'rgb(255, 159, 64)',
+                      'rgb(255, 205, 86)',
+                      'rgb(75, 192, 192)',
+                      'rgb(54, 162, 235)',
+                      'rgb(153, 102, 255)',
+                      'rgb(201, 203, 207)'
+                  ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              indexAxis: 'y',
+              // Elements options apply to all of the options unless overridden in a dataset
+              // In this case, we are setting the border of each horizontal bar to be 2px wide
+              elements: {
+                bar: {
+                  borderWidth: 2,
+                }
+              },
+              plugins: {
+                legend: {
+                  position: 'right',
+                },
+                title: {
+                  display: true,
+                  text: 'Applicant Status Chart'
+                }
+              }
+            },
+          });
 
   </script>
 
