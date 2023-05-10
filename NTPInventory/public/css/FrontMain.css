@@ -209,7 +209,7 @@ header{
 	font-size: var(--p-font);
 	font-weight: 500;
 	padding: 20px 30px;
-
+	
 	transition: ease .40s; /*navbar transiction*/
 }
 
@@ -220,11 +220,9 @@ header{
 	color: var(--bg-color);
 	font-size: var(--p-font);
 	padding: 10px 20px;
-	 /*navbar transiction*/	
-	
-
+	 /*navbar transiction*/
 }	
-.c  i{
+.c i{
 	width: 55px;
 }
 .c{	
@@ -247,9 +245,9 @@ header{
 	background-position: right;
 }
 .navbar li ul{
-	 position: absolute;	
+	position: absolute;	
 	margin-top: 10px;
-
+	/* background-color: var(--bg-color); */
 	margin-left: 20px;
 	width: 145px;
 	transition: ease .10s;
@@ -266,8 +264,6 @@ header{
 .navbar li:hover > ul{
 	display: grid;
 }
-
-
 
 .navbar a:hover{
 /*	background: var(--bg-color);
@@ -859,9 +855,18 @@ header.sticky{
 }
 
 .navbar li ul.stickys{
-	background: var(--bg-color); /* header color*/
+	background-color: var(--bg-color); /* header color*/
 	box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px;
+}
 
+.navbar li ul.stickys1{
+	background-color: var(--bg-color); /* header color*/
+	box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px;
+}
+
+.navbar li ul.stickys2{
+	background-color: var(--bg-color); /* header color*/
+	box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px;
 }
 
 .sticky .logo{
@@ -869,7 +874,8 @@ header.sticky{
 }
 .sticky .navbar a, .sticky .navbar a i{
 	color: var(--text-color);
-} 
+}
+
 #shart{
 	padding: 15px 15%;
 }
@@ -1193,8 +1199,7 @@ header.sticky{
 	grid-template-columns: 1fr .80fr;
 }
 
-
-.title{
+.tickstle{
 	text-align: center;
 }
 .title h2{
@@ -2272,7 +2277,7 @@ background-color: #c8c8c8;
 .list h5{
 	font-size: 70px;
 	color: var(--bg-color);
-	margin-top: 30px;
+	margin-top: 20px;
 	/* text-align: center; */
 	position: relative;
 }

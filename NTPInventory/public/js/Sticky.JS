@@ -10,6 +10,17 @@ window.addEventListener ("scroll", function() {
     xa.classList.toggle ("stickys", window.scrollY > 0);
 });
 
+const xa1 = document.querySelector(".ticks1");
+
+window.addEventListener ("scroll", function() {
+    xa1.classList.toggle ("stickys1", window.scrollY > 0);
+});
+
+const xa2 = document.querySelector(".ticks2");
+
+window.addEventListener ("scroll", function() {
+    xa2.classList.toggle ("stickys2", window.scrollY > 0);
+});
 
 
 let menu = document.querySelector('#menu-icon');

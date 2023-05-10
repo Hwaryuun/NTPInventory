@@ -9,7 +9,7 @@
 
      
         <div class="specs">
-            <a href=""> ADMIN </a> >>  <a href=""> STATUS </a> 
+            <a href=""> ADMIN </a> >>  <a href=""> STATUS </a>
         </div>
 
         <div class="specsxa">
@@ -17,7 +17,7 @@
         </div>   
 
 
-    <section class="packagesxss" id="package">  
+    <section class="packagesxss" id="package">
    
 
     <div class="Add-Holders"> <!-- Add Holder------------------------------------>

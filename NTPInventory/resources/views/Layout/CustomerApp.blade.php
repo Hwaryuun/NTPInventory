@@ -29,10 +29,19 @@
 		<ul class="navbar">
 			<li><a class ="a" href="{{Route('NTPDashBoard.index')}}"> <i class="fa-solid fa-house"></i> Home</a></li>
 			
-			<li><a class ="a" href="{{Route('NTPApplicant.index')}}"><i class="fa-solid fa-users"></i>Applicants</a></li>
-			<li><a class ="a" href=""><i class="fa-solid fa-file-circle-exclamation"></i>Status</a></li>
-            <li><a class ="a" href="#Account"><i class="fa-solid fa-user"></i> {{auth()->user()->name}}  </a>
+			<li><a class ="a" href="{{Route('NTPApplicant.index')}}"><i class="fa-solid fa-users"></i>Applicants</a>
 				<ul class="ticks">
+					<li><a href="" class ="c"><i class="fa-solid fa-chart-simple"></i>Status</a></li>
+				</ul>
+			</li>
+
+			<li><a class ="a" href=""><i class="fa-solid fa-school"></i>School</a>
+				<ul class="ticks1">
+					<li><a href="" class ="c"><i class="fa-solid fa-city"></i>Districts</a></li>
+				</ul>
+			</li>
+            <li><a class ="a" href="#Account"><i class="fa-solid fa-user"></i> {{auth()->user()->name}}  </a>
+				<ul class="ticks2">
 					<li><a href="" class ="c"><i class="fa-solid fa-chart-simple"></i> Reports</a></li>	
 					<li><a href="{{Route('NTPLogout')}}" class ="c"><i class="fa-solid fa-right-from-bracket"></i> Log out</a></li>
 				</ul>
@@ -85,7 +94,7 @@
 		<hr>
 		
 		<div class="end-text">
-			<p>©{{now()->format('Y')}} All rights reserved | By Allen Dex Cutie Pie Farol</p>
+			<p>©{{now()->format('Y')}} All rights reserved | By SDO QC OJTs</p>
 		</div>
 	</div>
 	
