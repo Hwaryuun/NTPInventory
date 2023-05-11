@@ -6,8 +6,6 @@
     <section class="home" id="home"> </section>
 
         <!--container--->
-          
-
         <section class="container">
             <div class="text">
                 <h2>SUMMARY REPORT</h2>
@@ -52,37 +50,40 @@
                 </div>
               </div>
             </div>
-
             <!-- END FOR CARDS -->
+
             <div class="row">
-                    <div class="column" id="shart">    
-                        <h5 class='namechart'>SCHOOLS PER DISTRICT</h5>
-                        <canvas id="myChart" ></canvas>          
-                    </div>
-                    
-                    <div class="column" id="shart">
-                        <h5 class='namechart' >SCHOOL LEVELS</h5>
-                        <canvas id="myCharts" ></canvas>                      
-                    </div>    
+                <div class="column" id="shart">    
+                    <h5 class='namechart'>SCHOOLS PER DISTRICT</h5>
+                    <canvas id="myChart" ></canvas>          
+                </div>
+                
+                <div class="column" id="shart">
+                    <h5 class='namechart' >SCHOOL LEVELS</h5>
+                    <canvas id="myCharts" ></canvas>                      
+                </div>    
             </div>
         </section>
 
         <!--destination section--->
         <section class="destination" id="destination">
-            <div class="core charts-row">
-                <h5 class='namechart'>STATUS REPORT</h5>
-                <div class="chart-column">
-                  <div class="statusChart">
-                    <canvas id="StatusChart"></canvas>
+            <div class="core">
+                <h5 class='namechart'>APPLICANT INFORMATION ANALYTICS</h5>
+                <div class="row app-row">
+                  <div class="column app-column">
+                    <canvas id="myChartb"></canvas>
                   </div>
-                  <div class="positionChart">
+                  <div class="column app-column" id="shart">
+                    <canvas id="ToAChart"></canvas>           
+                  </div>
+                </div>
+                <div class="row app-row" style="margin-bottom: -110px">
+                  <div class="column app-column">
+                    <canvas id="DepartmentChart"></canvas>
+                  </div>
+                  <div class="column app-column">
                     <canvas id="PositionChart"></canvas>
-                  </div>
-                </div> 
-                <div class="chart-columnFull">
-                  <div class="verticalBarChart">
-                    <canvas id="myChartb"></canvas>           
-                  </div>
+                  <div>
                 </div>
             </div>
         </section>
@@ -117,6 +118,7 @@
         }
       });
     </script>
+
 <script>
       const ctxs = document.getElementById('myChart');
 
@@ -131,7 +133,7 @@
                         'Blue'
                     ],
           datasets: [{
-                label: 'My First Dataset',
+                label: '',
                 data: [11, 16, 7, 3, 14],
                 backgroundColor: [
                 'rgb(255, 99, 132)',
@@ -145,6 +147,45 @@
       });
 </script>
 
+<!-- APPLICANT ANALYTICS -->
+
+<script>
+      const toa = document.getElementById('ToAChart');
+
+      new Chart(toa, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'City Permanent',
+                'National Permanent',
+                'MOOE',
+                'Contractual'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Type of Application'
+            }
+          }
+        },
+      });
+    </script>
 
 
 <script>
@@ -154,54 +195,48 @@
           type: 'bar',
           data: {
             labels: [
-           
-                    'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',
-              
+              'Diseased',  'Retired', 'Resigned', 'Transferred', 'AWOL', 'Active', 'Inactive',
             ],
             datasets: [{
               label: 'Full',
               data:  [
-               14,21,23,32
+               61,10,23,14,51,13,2
               ],
               backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)'
-                    ],
-                    borderColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 159, 64)',
-                    'rgb(255, 205, 86)',
-                    'rgb(75, 192, 192)',
-                    'rgb(54, 162, 235)',
-                    'rgb(153, 102, 255)',
-                    'rgb(201, 203, 207)'
-                ],
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(255, 205, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(201, 203, 207, 0.7)',
+              ],
+              borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)',
+              ], 
+              borderRadius: 30,
               borderWidth: 1
             }]
           },
-          
           options: {
+            responsive: true,
             scales: {
               y: {
                 beginAtZero: true
               }
             },
-          plugins: {
-            legend: {
-              position: 'right',
-            },
-            title: {
-              display: true,
-              text: 'Type of Application'
+            plugins: {
+              title: {
+                display: true,
+                text: 'Applicant Status Chart'
+              }
             }
-          }
-      
-       
           }
         });
 
@@ -211,7 +246,7 @@
 
   <script>
     
-    const statusBar = document.getElementById('StatusChart');
+    const statusBar = document.getElementById('DepartmentChart');
 
     new Chart(statusBar, {
       type: 'bar',
@@ -222,49 +257,33 @@
         datasets: [{
           label: 'Full',
           data:  [
-                    14,21,23,32
-                ],
-                backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(255, 159, 64, 0.2)',
-                      'rgba(255, 205, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(201, 203, 207, 0.2)'
-                      ],
-                      borderColor: [
-                      'rgb(255, 99, 132)',
-                      'rgb(255, 159, 64)',
-                      'rgb(255, 205, 86)',
-                      'rgb(75, 192, 192)',
-                      'rgb(54, 162, 235)',
-                      'rgb(153, 102, 255)',
-                      'rgb(201, 203, 207)'
-                  ],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              indexAxis: 'y',
-              // Elements options apply to all of the options unless overridden in a dataset
-              // In this case, we are setting the border of each horizontal bar to be 2px wide
-              elements: {
-                bar: {
-                  borderWidth: 2,
-                }
-              },
-              plugins: {
-                legend: {
-                  position: 'right',
-                },
-                title: {
-                  display: true,
-                  text: 'Applicant Status Chart'
-                }
-              }
-            },
-          });
+            14,21,23,32
+          ],
+          backgroundColor: [
+            'rgb(121, 129, 255)',
+          ],
+          borderColor: [
+            'rgb(121, 129, 255)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        indexAxis: 'y',
+        elements: {
+          bar: {
+            borderWidth: 2,
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Applicant Department Chart'
+          }
+        }
+      },
+    });
 
   </script>
 
@@ -275,50 +294,32 @@
     new Chart(positionBar, {
       type: 'bar',
       data: {
-        labels: [
-           
-           'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',
-     
-   ],
-   datasets: [{
-     label: 'Full',
-     data:  [
-              14,21,23,32
-          ],
-          backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(201, 203, 207, 0.2)'
-                ],
-                borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
-            ],
-          borderWidth: 1
-        }]
+      labels: [
+          'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',
+      ],
+      datasets: [{
+        label: 'Full',
+        data:  [
+                  14,21,23,32
+              ],
+              backgroundColor: [
+                'rgb(121, 129, 255)',
+              ],
+              borderColor: [
+                'rgb(121, 129, 255)',
+              ],
+              borderWidth: 1
+            }]
       },
       options: {
+        responsive: true,
         indexAxis: 'y',
-        // Elements options apply to all of the options unless overridden in a dataset
-        // In this case, we are setting the border of each horizontal bar to be 2px wide
         elements: {
           bar: {
             borderWidth: 2,
           }
         },
         plugins: {
-          legend: {
-            position: 'right',
-          },
           title: {
             display: true,
             text: 'Applicant Position Chart'
