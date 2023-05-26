@@ -39,9 +39,9 @@
            		   <div class="i"> 
            		    	<i class="fas fa-lock" ></i>
            		   </div>
-           		   <div class="div">
+           		   <div class="div">			
            		    	<h5>Password : </h5>				
-           		    	<input type="password" class="input" name="password">				 	
+           		    	<input type="password" class="input" name="password">					 	
             	   </div>  		
 					      
 				</div>

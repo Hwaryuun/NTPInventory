@@ -948,6 +948,9 @@ header.sticky{
 #shart{
 	padding: 15px 15%;
 }
+#shart1{
+	padding: 20px 20%;
+}
 .text{
 	text-align: center;
 }
@@ -2767,7 +2770,19 @@ hr{
 	margin: 0 0 0 10px;
   }
 
- 
+  @media(min-width: 1600px){
+	.row{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.row::after{
+		content: "";
+		clear: both;
+		
+		
+	}
+	
+  }
 @media(max-width: 1600px){
 	.row{
 		display: grid;
@@ -2974,7 +2989,7 @@ hr{
 		background-color: #ffffff;
 	}
 	.navbar{
-		background-color: var(--bg-color);
+		/* background-color: var(--bg-color); */
 		position: absolute;
 		color: black;
 		top: 70px;

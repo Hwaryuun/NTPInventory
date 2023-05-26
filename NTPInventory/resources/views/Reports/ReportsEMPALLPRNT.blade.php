@@ -9,7 +9,7 @@
 
 
         <div class="specs">
-            <a href=""> ADMIN </a> >>  <a href=""> EMPLOYEE </a>
+            <a href=""> EMPLOYEE </a> >>  <a href=""> REPORTS </a> >>  <a href=""> ALL EMPLOYEE </a>
         </div>
 
         <div class="specsxa">
@@ -19,34 +19,46 @@
 
     <section class="packagesx" id="package">
 
-    <div class="Table-1" >
-        <div class="Table-con">
+        <div class="Table-1" >
+            <div class="Table-con">
 
-            <div class="Cnt">
-                <H3 class="ORP">Employee Table</H3>
-                <p class="DY">SDO QC</p>
+                <div class="Cnt">
+                    <H3 class="ORP">Employee Reports</H3>
+                    <p class="DY">SDO QC</p>
+                </div>
+                    <div class="ResponsiveSection">
+
+                        <div class = "ResponsiveItem">
+                                <a  href="{{route('PrintAllEMP')}}" class ="Add-P"> <span> PRINT ALL </span></a>
+                        </div>
+
+                        <div class = "ResponsiveItem">
+                                <a  href="{{Route('PrintNATIONAL')}}" class ="Add-P"> <span> NATIONAL PERMANENT </span></a>
+                        </div>
+
+                        <div class = "ResponsiveItem">
+                                 <a  href="{{Route('PrintCITY')}}" class ="Add-P"> <span> CITY PERMANENT </span></a>
+                        </div>
+
+                        <div class = "ResponsiveItem">
+                                <a  href="{{Route('PrintCONTRACT')}}" class ="Add-P"> <span> CONTRACTUAL </span></a>
+                        </div>
+
+                        <div class = "ResponsiveItem">
+                                <a  href="{{Route('PrintMOOE')}}" class ="Add-P"> <span> MOOE </span></a>
+                        </div>
+                    </div>
+
             </div>
 
-            <div class="Cnt2">
-                <div class = "A-DD">
-                    <a  href="{{Route('ApplicantArchives')}}" class ="ARCC">  <i class="fa-solid fa-box-archive"></i></a>
-                </div>
-                <div class = "A-DD">
-                        <a  href="{{Route('NTPApplicant.create')}}" class ="Add-P">  <i class="fa-solid fa-plus"></i> <span> New </span></a> <!--Modal Button any -->
-                </div>
-            </div>
-
-        </div>
-
-        <div class = " Table-Section">
-            <table id="Category" class="displayd responsive nowrap" style="width:100%">
+            <div class = " Table-Section">
+                <table id="Category" class="displayd responsive nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th>Actions</th>
-                        <th>Employee Number </th>
+                        <th>Item Number </th>
                         <th>Name</th>
                         <th>Position</th>
-                        <th>Gender</th>
                         <th>Appointment Type</th>
                         <th>Eligibility</th>
                         <th>School</th>
@@ -54,18 +66,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach ($applicants as  $stats)
+                @foreach ($applicants as $stats)
                     <tr>
                         <td class="BTNS-EDTY">
                              <a class="EditsT" href ="{{Route('NTPApplicant.show', $stats->id)}}" > <i class="fa-solid fa-eye"></i> </a>
-                             <a class="Edits" href ="{{Route('NTPApplicant.edit', $stats->id)}}" > <i class="fa-solid fa-pen-to-square"></i>  </a>
-                             <button class="Dlts" onclick="deleteData({{$stats->id}})" type="submit"><i class="fa-solid fa-trash"></i></button>
-                             <form id ="delete-form-{{$stats->id}}" action="{{Route('NTPApplicant.destroy', $stats->id)}}" method = "POST">  @csrf  @method('DELETE') </form>
                         </td>
                         <td>{{$stats->itemnumber}}</td>
                         <td>{{$stats->firstname}} {{$stats->middlename}} {{$stats->lastname}}</td>
                         <td>{{$stats->position}}</td>
-                        <td>{{$stats->gender}}</td>
                         <td>{{$stats->typeofappointment}}</td>
                         <td>{{$stats->eligibility}}</td>
                         <td>{{$stats->School->school}}</td>
@@ -95,10 +103,9 @@
                     </tr>
                     @endforeach
                 </tbody>
-            </table>
+                </table>
+            </div>
         </div>
-
-    </div>
     </section>
 
 

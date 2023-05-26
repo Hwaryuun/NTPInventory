@@ -13,7 +13,7 @@ table.dataTable thead > tr > td.sorting_desc_disabled {
   cursor: pointer;
   position: relative;
   padding-right: 26px;
-  
+
 }
 table.dataTable thead > tr > th.sorting:before,
 table.dataTable thead > tr > th.sorting:after,
@@ -41,7 +41,7 @@ table.dataTable thead > tr > td.sorting_desc_disabled:after {
   right: 10px;
   line-height: 9px;
   font-size: 1.6em;
-  
+
 
 }
 table.dataTable thead > tr > th.sorting:before,
@@ -125,7 +125,7 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
 }
 .dataTables_wrapper .dataTables_length {
   float: left;
-  
+
 }
 .dataTables_wrapper .dataTables_length select {
   border: 1px solid #006f98;
@@ -138,7 +138,7 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
 .dataTables_wrapper .dataTables_filter {
   float: right;
   text-align: right;
-  
+
 }
 
 .dataTables_wrapper .dataTables_filter input { /*search*/
@@ -221,7 +221,7 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   width: 100%;
   border-radius: 4px;
- 
+
 }
 .displayd thead tr {
   color: #ffffff;
@@ -230,7 +230,7 @@ table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
 
 th{
   background: #006f98;
- 
+
   padding: 17px 25px;
   text-align: center;
 }
@@ -302,7 +302,7 @@ tbody tr:nth-of-type(odd) {
   color: #ffffff;
   border-radius: 3px;
 }
-.TERMINATE i, .TERMINATES i{ 
+.TERMINATE i, .TERMINATES i{
   margin-right: 10px;
 }
 .TERMINATES{
@@ -340,18 +340,18 @@ tbody tr:nth-of-type(odd) {
 }
 
 .DltsI{
- 
+
   background-color: #00b52d;
 }
 .EditsT i{
   padding: 8px;
   border-radius: 3px;
   background-color: #00e061;
-} 
+}
 .EditsT span{
   margin-right: 10px;
 }
-.Edits i,.Dlts i , .EditsP i, .EditsL i, .EditsY i, .EditsZ i, .Dltss i { 
+.Edits i,.Dlts i , .EditsP i, .EditsL i, .EditsY i, .EditsZ i, .Dltss i {
   background-color: #0298cf;
   padding: 8px;
   border-radius: 3px;
@@ -374,7 +374,7 @@ background-color: #03b5a3;
 .Dltss i {
   background-color: #ff3434;
 }
-.EditsP i{ 
+.EditsP i{
   background-color: #ffa750;
 }
 
@@ -397,7 +397,7 @@ background-color: #03b5a3;
 }
 
 
-.Editsx i,.Dltsx i, .DltsI i { 
+.Editsx i,.Dltsx i, .DltsI i {
   background-color: #0298cf;
   padding: 12px;
   border-radius: 3px;
@@ -419,11 +419,11 @@ background-color: #03b5a3;
 
 }
 
-.Process, .New, .Done,  .Quantity-2, .red{
+.Process, .New, .Done,  .Quantity-2, .red, .gray, .orange, .violet, .blue , .brown{
   border-radius: 3px;
   padding: 8px 0 8px 0;
 
-  
+
 }
 .red{
   background-color: rgb(255, 140, 140);
@@ -433,15 +433,33 @@ background-color: #03b5a3;
 .Process{
 background-color: rgb(255, 206, 122);
 }
-.New{ 
+.New{
 background-color: rgb(122, 182, 255);
 
 }
 .Done{
 background-color: rgb(122, 255, 166);
-
+}
+.gray{
+  background-color: rgb(80, 80, 80);
+  color: white;
 
 }
+.orange{
+  background-color: rgb(255, 200, 98);
+}
+.violet{
+  background-color: rgb(224, 224, 0);
+}
+.blue{
+  background-color: lightblue;
+}
+.brown{
+  background-color: rgb(186, 98, 98);
+  color: white;
+}
+
+
 .Quantity-2{
 background-color: rgb(122, 231, 255);
 }
@@ -452,7 +470,26 @@ background-color: rgb(122, 231, 255);
   grid-gap: 10px;
 }
 
+/* Responsive Print Buttons */
+.ResponsiveSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: space-between;
+}
 
+.ResponsiveItem {
+    flex-basis: 20%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .ResponsiveItem {
+        flex-basis: 100%;
+    }
+}
+/* end */
 
 .ARCC, .ARCCS{
   background: #5a78e2;
@@ -497,3 +534,29 @@ background-color: rgb(122, 231, 255);
   margin-left: 3px;
 
 }
+
+/* For School Generate Reports */
+
+.SchoolReportTable{
+  visibility: hidden;
+  display: none;
+}
+
+.showTable{
+  width: 100%;
+  visibility: visible;
+  display: table;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+}
+/* end */

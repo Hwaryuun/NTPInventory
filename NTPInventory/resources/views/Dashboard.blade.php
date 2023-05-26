@@ -17,8 +17,8 @@
               <div class="card-column">
                 <div class="mainCard">
                   <div class="content-column">
-                    <p>Total Applicants</p>
-                    <h1>0</h1>
+                    <p>Total Employees</p>
+                    <h1>{{count($applicant)}}</h1>
                   </div>
                   <div class="card-icon">
                     <i class="fa-solid fa-users"></i>
@@ -30,7 +30,7 @@
                 <div class="mainCard">
                   <div class="content-column">
                     <p>Total Schools</p>
-                    <h1>0</h1>
+                    <h1>{{count($school)}}</h1>
                   </div>
                   <div class="card-icon">
                     <i class="fa-solid fa-school"></i>
@@ -42,7 +42,7 @@
                 <div class="mainCard">
                   <div class="content-column">
                     <p>Total Districts</p>
-                    <h1>0</h1>
+                    <h1>{{count($district)}}</h1>
                   </div>
                   <div class="card-icon">
                     <i class="fa-solid fa-city"></i>
@@ -68,19 +68,22 @@
         <!--destination section--->
         <section class="destination" id="destination">
             <div class="core">
-                <h5 class='namechart'>APPLICANT INFORMATION ANALYTICS</h5>
+                <h5 class='namechart'>EMPLOYEE INFORMATION ANALYTICS</h5>
+                
                 <div class="row app-row">
                   <div class="column app-column">
                     <canvas id="myChartb"></canvas>
                   </div>
-                  <div class="column app-column" id="shart">
+                  <div class="column app-column" id="shart1">
                     <canvas id="ToAChart"></canvas>           
                   </div>
                 </div>
-                <div class="row app-row" style="margin-bottom: -110px">
+
+                <div class="row app-row" style="margin-bottom: -80px">
                   <div class="column app-column">
                     <canvas id="DepartmentChart"></canvas>
                   </div>
+
                   <div class="column app-column">
                     <canvas id="PositionChart"></canvas>
                   <div>
@@ -101,13 +104,17 @@
         type: 'doughnut',
         data: {
             labels: [
-                'Red',
-                'Blue',
-                'Yellow'
+                @foreach ($SL as $sl)   
+                  '{{$sl->level}}',
+                @endforeach
             ],
             datasets: [{
-                label: 'My First Dataset',
-                data: [300, 50, 100],
+                label: 'Total School',
+                data: [
+                  @foreach ($SL as $sl)   
+                    '{{$sl->TotalSchoolPerLevel}}',
+                  @endforeach
+                ],
                 backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
@@ -126,28 +133,30 @@
         type: 'polarArea',
         data: {
             labels: [
-                        'Red',
-                        'Green',
-                        'Yellow',
-                        'Grey',
-                        'Blue'
+                       @foreach ($SPD as $sd)   
+                          '{{$sd->District->district}}',
+                        @endforeach
                     ],
           datasets: [{
-                label: '',
-                data: [11, 16, 7, 3, 14],
+                label: 'Total School',
+                data: [
+                       @foreach ($SPD as $sd)   
+                          {{$sd->TotalSchool}},
+                        @endforeach
+                ],
                 backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(75, 192, 192)',
-                'rgb(255, 205, 86)',
-                'rgb(201, 203, 207)',
-                'rgb(54, 162, 235)'
+                'rgb(255, 99, 132, 0.6)',
+                'rgb(75, 192, 192, 0.6)',
+                'rgb(255, 205, 86, 0.6)',
+                'rgb(201, 203, 207, 0.6)',
+                'rgb(54, 162, 235, 0.6)'
                 ]
             }]
         }
       });
 </script>
 
-<!-- APPLICANT ANALYTICS -->
+<!-- EMPLOYEE ANALYTICS -->
 
 <script>
       const toa = document.getElementById('ToAChart');
@@ -156,14 +165,17 @@
         type: 'doughnut',
         data: {
             labels: [
-                'City Permanent',
-                'National Permanent',
-                'MOOE',
-                'Contractual'
+                @foreach ($TOA as $toa)
+                  '{{$toa->typeofappointment}}',
+                @endforeach
             ],
             datasets: [{
-                label: 'My First Dataset',
-                data: [300, 50, 100],
+                label: 'Total Employees',
+                data: [
+                    @foreach ($TOA as $toa)
+                      '{{$toa->TypeOfAppointment}}',
+                    @endforeach
+                ],
                 backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
@@ -195,12 +207,16 @@
           type: 'bar',
           data: {
             labels: [
-              'Diseased',  'Retired', 'Resigned', 'Transferred', 'AWOL', 'Active', 'Inactive',
+                @foreach ($ASC as $as)
+                  '{{$as->status}}',
+                @endforeach
             ],
             datasets: [{
-              label: 'Full',
+              label: 'Total Employees Per Status',
               data:  [
-               61,10,23,14,51,13,2
+                  @foreach ($ASC as $as)
+                    '{{$as->TotalEmployeeStatus}}',
+                  @endforeach
               ],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.7)',
@@ -234,7 +250,7 @@
             plugins: {
               title: {
                 display: true,
-                text: 'Applicant Status Chart'
+                text: 'Employee Status Chart'
               }
             }
           }
@@ -252,12 +268,16 @@
       type: 'bar',
       data: {
         labels: [
-           'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',  
+            @foreach ($EDC as $edc)
+              '{{$edc->department}}',
+            @endforeach
         ],
         datasets: [{
-          label: 'Full',
+          label: 'Total Employees Per Position',
           data:  [
-            14,21,23,32
+            @foreach ($EDC as $edc)
+              '{{$edc->TotalEmployeePerDep}}',
+            @endforeach
           ],
           backgroundColor: [
             'rgb(121, 129, 255)',
@@ -279,7 +299,7 @@
         plugins: {
           title: {
             display: true,
-            text: 'Applicant Department Chart'
+            text: 'Employee Department Chart'
           }
         }
       },
@@ -295,21 +315,25 @@
       type: 'bar',
       data: {
       labels: [
-          'MOOE',  'CONTRACT',   'PERMA',   'SSAAS',
+          @foreach ($EPC as $epc)
+            '{{$epc->position}}',
+          @endforeach
       ],
       datasets: [{
-        label: 'Full',
+        label: 'Total Employees Per Position',
         data:  [
-                  14,21,23,32
-              ],
-              backgroundColor: [
-                'rgb(121, 129, 255)',
-              ],
-              borderColor: [
-                'rgb(121, 129, 255)',
-              ],
-              borderWidth: 1
-            }]
+            @foreach ($EPC as $epc)
+              '{{$epc->TotalEmployeePerPos}}',
+            @endforeach
+        ],
+        backgroundColor: [
+          'rgb(121, 129, 255)',
+        ],
+        borderColor: [
+          'rgb(121, 129, 255)',
+        ],
+          borderWidth: 1
+        }]
       },
       options: {
         responsive: true,
@@ -322,7 +346,7 @@
         plugins: {
           title: {
             display: true,
-            text: 'Applicant Position Chart'
+            text: 'Employee Position Chart'
           }
         }
       },
